@@ -1,0 +1,10 @@
+import { RatingVisibility, type Rating } from "@/modules/reputation/types";
+
+export const mockRatings: Rating[] = [
+  { id: "r-negative", taskId: "historic-negative", authorUserId: "u-ana", targetUserId: "u-bruno", targetProfile: "executor", stars: 2, comment: "Llegó tarde y dejó el área sin ordenar al terminar.", eligibleAt: "2026-06-10T14:00:00-05:00", submittedAt: "2026-06-10T16:00:00-05:00", visibility: RatingVisibility.Revealed, revealedAt: "2026-06-11T09:00:00-05:00" },
+  { id: "r-exec-done-other", taskId: "t-exec-done", authorUserId: "u-carlos", targetUserId: "u-demo", targetProfile: "executor", stars: 5, comment: "Entrega rápida y bien coordinada.", eligibleAt: "2026-09-08T18:10:00-05:00", submittedAt: "2026-09-08T18:30:00-05:00", visibility: RatingVisibility.Hidden },
+  { id: "r1", taskId: "t-demo-done", authorUserId: "u-renzo", targetUserId: "u-demo", targetProfile: "requester", stars: 5, comment: "Todo coordinado y el pago quedó claro desde el inicio.", eligibleAt: "2026-09-08T13:30:00-05:00", submittedAt: "2026-09-08T14:00:00-05:00", visibility: RatingVisibility.Hidden },
+  { id: "r2", taskId: "historic-1", authorUserId: "u-carlos", targetUserId: "u-demo", targetProfile: "requester", stars: 5, comment: "Buena coordinación.", eligibleAt: "2026-08-20T12:00:00-05:00", submittedAt: "2026-08-20T13:00:00-05:00", visibility: RatingVisibility.Revealed, revealedAt: "2026-08-20T14:00:00-05:00" },
+  { id: "r3", taskId: "historic-2", authorUserId: "u-demo", targetUserId: "u-carlos", targetProfile: "executor", stars: 5, comment: "Muy cuidadoso con el mueble y puntual.", eligibleAt: "2026-08-11T15:00:00-05:00", submittedAt: "2026-08-11T16:00:00-05:00", visibility: RatingVisibility.Revealed, revealedAt: "2026-08-11T18:00:00-05:00" },
+  { id: "r4", taskId: "historic-3", authorUserId: "u-demo", targetUserId: "u-ana", targetProfile: "executor", stars: 4, comment: "Buen trabajo, demoró un poco más de lo previsto.", eligibleAt: "2026-07-28T17:00:00-05:00", submittedAt: "2026-07-28T19:00:00-05:00", visibility: RatingVisibility.Revealed, revealedAt: "2026-07-29T09:00:00-05:00" },
+];

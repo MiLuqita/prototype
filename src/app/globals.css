@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/*
+  PROVISIONAL DESIGN TOKENS.
+  The official Mi Luquita style guide was not present in the uploaded files.
+  Replace this block with the official values when the guide is supplied.
+*/
+@theme {
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-200: #fed7aa;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-ink: #172033;
+  --color-muted: #667085;
+  --color-canvas: #f7f8fb;
+  --color-surface: #ffffff;
+  --color-success: #17864b;
+  --color-danger: #c9362b;
+  --color-warning: #a15c00;
+  --radius-card: 1.25rem;
+  --radius-control: 0.9rem;
+  --shadow-card: 0 12px 30px rgba(23, 32, 51, 0.08);
+}
+
+:root {
+  --ml-brand: #f97316;
+  --ml-brand-strong: #ea580c;
+  --ml-ink: #172033;
+  --ml-muted: #667085;
+  --ml-canvas: #f7f8fb;
+  --ml-surface: #ffffff;
+  --ml-border: #e7e9ee;
+  --ml-success: #17864b;
+  --ml-danger: #c9362b;
+  --ml-warning: #a15c00;
+  --ml-radius-card: 20px;
+  --ml-radius-control: 14px;
+  --ml-shadow-card: 0 12px 30px rgba(23, 32, 51, 0.08);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--ml-canvas); }
+body {
+  margin: 0;
+  background: var(--ml-canvas);
+  color: var(--ml-ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+
+.ml-shell { min-height: 100dvh; padding-bottom: 88px; }
+.ml-page { width: min(100%, 720px); margin: 0 auto; padding: 20px 16px 32px; }
+.ml-card { background: white; border: 1px solid var(--ml-border); border-radius: var(--ml-radius-card); box-shadow: var(--ml-shadow-card); }
+.ml-input { width: 100%; border: 1px solid #d9dde6; background: white; border-radius: var(--ml-radius-control); padding: 12px 14px; outline: none; transition: border-color .15s ease, box-shadow .15s ease; }
+.ml-input:focus { border-color: var(--ml-brand); box-shadow: 0 0 0 3px rgba(249,115,22,.12); }
+.ml-label { display: block; font-size: .875rem; font-weight: 700; margin-bottom: 7px; color: #344054; }
+.ml-section-title { font-size: 1.15rem; line-height: 1.3; font-weight: 800; letter-spacing: -.02em; }
+.ml-muted { color: var(--ml-muted); }
+.ml-kicker { color: var(--ml-brand-strong); font-size: .77rem; font-weight: 850; text-transform: uppercase; letter-spacing: .08em; }
+.ml-grid { display: grid; gap: 12px; }
+.ml-divider { height: 1px; background: var(--ml-border); }
+
+@media (min-width: 760px) {
+  .ml-page { padding: 28px 24px 44px; }
+}
+
+/* Responsive hardening for narrow phones and long mock content. */
+.ml-page { overflow-x: clip; }
+.ml-page :where(h1, h2, h3, p, dd, li) { overflow-wrap: anywhere; }
+.ml-input { min-width: 0; }
+.ml-scroll-row { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.ml-scroll-row::-webkit-scrollbar { display: none; }
+
+@media (max-width: 359px) {
+  .ml-page { padding-left: 12px; padding-right: 12px; }
+}

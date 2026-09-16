@@ -1,0 +1,27 @@
+import { ApplicationStatus, type Application } from "@/modules/applications/types";
+
+export const mockApplications: Application[] = [
+  { id: "ap-001", taskId: "t-001", executorId: "u-carlos", message: "Tengo experiencia armando roperos similares y llevo taladro y nivel.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T09:10:00-05:00" },
+  { id: "ap-002", taskId: "t-001", executorId: "u-bruno", message: "Puedo ir a la hora indicada. He armado muebles de melamina.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T09:45:00-05:00" },
+  { id: "ap-003", taskId: "t-001", executorId: "u-edgar", message: "Disponible y con herramientas.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T10:05:00-05:00" },
+  { id: "ap-004", taskId: "t-003", executorId: "u-maria", message: "Puedo ayudar con las cajas y soy cuidadosa con objetos frágiles.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T11:00:00-05:00" },
+  { id: "ap-005", taskId: "t-003", executorId: "u-renzo", message: "Tengo disponibilidad y movilidad si hiciera falta.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T11:20:00-05:00" },
+  { id: "ap-006", taskId: "t-005", executorId: "u-edgar", message: "Gasfitero con herramientas, puedo hacer la instalación completa.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T12:00:00-05:00" },
+  { id: "ap-007", taskId: "t-005", executorId: "u-carlos", message: "He cambiado caños similares. Disponible a las 2 pm.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T12:10:00-05:00" },
+  { id: "ap-008", taskId: "t-010", executorId: "u-pamela", message: "Tengo experiencia apoyando en cumpleaños y eventos familiares.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T13:00:00-05:00" },
+  { id: "ap-009", taskId: "t-010", executorId: "u-sofia", message: "Me manejo bien con organización y recepción de pedidos.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T13:30:00-05:00" },
+  { id: "ap-010", taskId: "t-010", executorId: "u-demo", message: "Puedo apoyar las tres horas y llegar 15 minutos antes.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T14:10:00-05:00" },
+  { id: "ap-011", taskId: "t-006", executorId: "u-demo", message: "Estoy cerca y puedo hacer el recojo al mediodía.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T15:00:00-05:00" },
+  { id: "ap-012", taskId: "t-009", executorId: "u-demo", message: "Me llevo bien con perros grandes y puedo cumplir los 90 minutos completos.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T15:20:00-05:00" },
+  { id: "ap-013", taskId: "t-020", executorId: "u-demo", message: "Puedo recogerlo y llevarlo directo a San Miguel.", status: ApplicationStatus.NotSelected, createdAt: "2026-09-09T10:20:00-05:00", resolvedAt: "2026-09-09T16:00:00-05:00" },
+  { id: "ap-exec-selected", taskId: "t-exec-selected", executorId: "u-demo", message: "Disponible a esa hora y puedo apoyar con medición y montaje.", status: ApplicationStatus.Selected, createdAt: "2026-09-09T09:00:00-05:00", resolvedAt: "2026-09-09T12:00:00-05:00" },
+  { id: "ap-exec-active", taskId: "t-exec-active", executorId: "u-demo", message: "Puedo apoyar con el montaje y orden.", status: ApplicationStatus.Selected, createdAt: "2026-09-08T10:00:00-05:00", resolvedAt: "2026-09-08T13:00:00-05:00" },
+  { id: "ap-exec-done", taskId: "t-exec-done", executorId: "u-demo", message: "Puedo hacer la entrega esta tarde.", status: ApplicationStatus.Selected, createdAt: "2026-09-07T12:00:00-05:00", resolvedAt: "2026-09-07T13:00:00-05:00" },
+  { id: "ap-exec-up", taskId: "t-exec-upcoming", executorId: "u-demo", message: "Puedo apoyar las dos horas y tengo disponibilidad.", status: ApplicationStatus.Selected, createdAt: "2026-09-08T12:00:00-05:00", resolvedAt: "2026-09-08T16:00:00-05:00" },
+  { id: "ap-demo-a1", taskId: "t-demo-applicants", executorId: "u-carlos", message: "Tengo rotomartillo, nivel y experiencia instalando repisas en concreto.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T16:10:00-05:00" },
+  { id: "ap-demo-a2", taskId: "t-demo-applicants", executorId: "u-bruno", message: "Puedo ir el sábado y llevo herramientas. He hecho instalaciones similares.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T16:35:00-05:00" },
+  { id: "ap-demo-a3", taskId: "t-demo-applicants", executorId: "u-edgar", message: "Disponible a esa hora, puedo hacer el nivelado y dejar todo limpio.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T17:05:00-05:00" },
+  { id: "ap-demo-a4", taskId: "t-demo-applicants", executorId: "u-diego", message: "Soy nuevo en la plataforma, pero tengo disponibilidad y puedo apoyar con la instalación.", status: ApplicationStatus.Submitted, createdAt: "2026-09-09T17:20:00-05:00" },
+  { id: "ap-014", taskId: "t-demo-pay", executorId: "u-carlos", message: "Disponible, llevo herramientas.", status: ApplicationStatus.Selected, createdAt: "2026-09-08T14:00:00-05:00", resolvedAt: "2026-09-09T09:00:00-05:00" },
+  { id: "ap-015", taskId: "t-demo-pay", executorId: "u-bruno", message: "Puedo hacerlo en dos horas.", status: ApplicationStatus.NotSelected, createdAt: "2026-09-08T14:20:00-05:00", resolvedAt: "2026-09-09T09:00:00-05:00" },
+];
